@@ -416,7 +416,9 @@ def generate_plot(
     fig.subplots_adjust(top=scale, left=1 - scale)
 
     # add information_box
-    plot_utils.create_information_box(axes[0], scale, cpt, plot_nr, ylims)
+    plot_utils.create_information_box(
+        axes[0], scale, cpt, plot_nr, ylims, settings["distance_from_plot"]
+    )
 
     return fig
 

@@ -47,9 +47,11 @@ class PlotSettings:
             "bottom_left",
             "bottom_right",
             "bottom_middle",
+            "top_middle",
         ]
         self.__plot_sizes = ["a4", "unlimited"]
         self.__top_types = ["relative", "absolute"]
+        self.__x_axis_type = ["primary", "secondary"]
 
         self.assign_default_settings()
 
@@ -124,6 +126,7 @@ class PlotSettings:
             "shift_graph": 0,
             "unit_converter": self.__unit_converters["None"],
             "ticks": np.arange(0, 30, 10).tolist(),
+            "x_axis_type": self.__x_axis_type[0],
         }
 
         self.plot_friction_settings = {
@@ -140,6 +143,7 @@ class PlotSettings:
             "shift_graph": 0,
             "unit_converter": self.__unit_converters["None"],
             "ticks": np.arange(0, 0.3, 0.1).tolist(),
+            "x_axis_type": self.__x_axis_type[0],
         }
 
         self.plot_friction_nbr_settings = {
@@ -156,6 +160,7 @@ class PlotSettings:
             "shift_graph": 0,
             "unit_converter": self.__unit_converters["None"],
             "ticks": np.arange(0, 12, 2).tolist(),
+            "x_axis_type": self.__x_axis_type[0],
         }
 
         self.plot_inv_friction_nbr_settings = {
@@ -172,6 +177,7 @@ class PlotSettings:
             "shift_graph": 0,
             "unit_converter": self.__unit_converters["None"],
             "ticks": np.arange(0, 600, 100).tolist(),
+            "x_axis_type": self.__x_axis_type[0],
         }
 
         self.plot_water_settings = {
@@ -188,6 +194,7 @@ class PlotSettings:
             "shift_graph": 1,
             "unit_converter": self.__unit_converters["None"],
             "ticks": np.arange(0, 1.0, 0.2).tolist(),
+            "x_axis_type": self.__x_axis_type[0],
         }
 
         graph_settings = {
@@ -240,6 +247,7 @@ class PlotSettings:
             "nbr_scale_units": 16,
             "font_size_labels": 8,
             "plot_size": self.__plot_sizes[0],
+            "distance_from_plot": -1,
         }
 
     def set_inversed_friction_number_in_plot(self):
